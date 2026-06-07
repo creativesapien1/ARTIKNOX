@@ -1,6 +1,1 @@
-{
-  "functions": {
-    "api/gemini.js": { "runtime": "nodejs20.x" },
-    "api/pixabay.js": { "runtime": "nodejs20.x" }
-  }
-}
+{}
