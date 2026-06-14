@@ -1,5 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  "version": 2,
+  "routes": [
+    { "src": "/api/gemini", "dest": "/api/gemini.js" },
+    { "src": "/api/pixabay", "dest": "/api/pixabay.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
