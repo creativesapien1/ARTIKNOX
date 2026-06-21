@@ -326,7 +326,7 @@ Title Text|||Introduction Text|||Section 1 Heading|||Section 1 Content|||Section
             if (systemInstruction) payload.systemInstruction = systemInstruction;
             if (generationConfig) payload.generationConfig = generationConfig;
 
-            const response = await fetchWithBackoff('/api/gemini', {
+            const response = await fetchWithBackoff('/api/gem.js', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ endpoint: 'gemini-2.5-flash:generateContent', payload })
