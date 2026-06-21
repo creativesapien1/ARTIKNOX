@@ -10,9 +10,8 @@ export default async function handler(req, res) {
 
     const { endpoint, payload } = req.body;
 
-    // Only allow known Gemini endpoints
     const allowedModels = [
-        'gemini-2.5-flash-preview-05-20:generateContent',
+        'gemini-2.5-flash:generateContent',
         'imagen-3.0-generate-002:predict'
     ];
     if (!allowedModels.includes(endpoint)) {
