@@ -326,7 +326,7 @@ Title Text|||Introduction Text|||Section 1 Heading|||Section 1 Content|||Section
             if (systemInstruction) payload.systemInstruction = systemInstruction;
             if (generationConfig) payload.generationConfig = generationConfig;
 
-            const response = await fetchWithBackoff('/api/gemini.js', {
+            const response = await fetchWithBackoff('/api/gem.js', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ endpoint: 'gemini-2.5-flash-preview-05-20:generateContent', payload })
@@ -397,7 +397,7 @@ Title Text|||Introduction Text|||Section 1 Heading|||Section 1 Content|||Section
              if (!GEMINI_API_KEY) return null;
              const payload = { instances: [{ prompt: `An artistic, classical-style portrait or representation of ${prompt}` }], parameters: { "sampleCount": 1 } };
              try {
-                 const response = await fetchWithBackoff('/api/gemini.js', {
+                 const response = await fetchWithBackoff('/api/gem.js', {
                      method: 'POST',
                      headers: { 'Content-Type': 'application/json' },
                      body: JSON.stringify({ endpoint: 'imagen-3.0-generate-002:predict', payload })
